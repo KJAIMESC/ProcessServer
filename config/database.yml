@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: qwerty
+  host: localhost
+
+development:
+  <<: *default
+  database: mariadb_dev_database
+
+test:
+  <<: *default
+  database: mariadb_test_database
+
+production:
+  <<: *default
+  database: mariadb_prod_database
